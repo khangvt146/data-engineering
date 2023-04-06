@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kafka-configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="kafka-extension.xsd">
+    <kafka-clusters>
+        <kafka-cluster>
+            <id>broker01</id>
+            <bootstrap-servers>broker:19092</bootstrap-servers>
+        </kafka-cluster>
+    </kafka-clusters>
+
+    <mqtt-to-kafka-mappings>
+        <mqtt-to-kafka-mapping>
+            <id>mapping-temperature</id>
+            <cluster-id>broker01</cluster-id>
+            <mqtt-topic-filters>
+                <mqtt-topic-filter>smartfarm/temperature</mqtt-topic-filter>
+            </mqtt-topic-filters>
+            <kafka-topic>smart_farm_temperature</kafka-topic>
+        </mqtt-to-kafka-mapping>
+
+        <mqtt-to-kafka-mapping>
+            <id>mapping-humidity</id>
+            <cluster-id>broker01</cluster-id>
+            <mqtt-topic-filters>
+                <mqtt-topic-filter>smartfarm/humidity</mqtt-topic-filter>
+            </mqtt-topic-filters>
+            <kafka-topic>smart_farm_humidity</kafka-topic>
+        </mqtt-to-kafka-mapping>
+
+        <mqtt-to-kafka-mapping>
+            <id>mapping-light</id>
+            <cluster-id>broker01</cluster-id>
+            <mqtt-topic-filters>
+                <mqtt-topic-filter>smartfarm/light</mqtt-topic-filter>
+            </mqtt-topic-filters>
+            <kafka-topic>smart_farm_light</kafka-topic>
+        </mqtt-to-kafka-mapping>
+
+        <mqtt-to-kafka-mapping>
+            <id>mapping-pressure</id>
+            <cluster-id>broker01</cluster-id>
+            <mqtt-topic-filters>
+                <mqtt-topic-filter>smartfarm/pressure</mqtt-topic-filter>
+            </mqtt-topic-filters>
+            <kafka-topic>smart_farm_pressure</kafka-topic>
+        </mqtt-to-kafka-mapping>
+
+        <mqtt-to-kafka-mapping>
+            <id>mapping-salinity</id>
+            <cluster-id>broker01</cluster-id>
+            <mqtt-topic-filters>
+                <mqtt-topic-filter>smartfarm/salinity</mqtt-topic-filter>
+            </mqtt-topic-filters>
+            <kafka-topic>smart_farm_salinity</kafka-topic>
+        </mqtt-to-kafka-mapping>
+    </mqtt-to-kafka-mappings>
+
+</kafka-configuration>

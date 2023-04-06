@@ -1,0 +1,4 @@
+kafka/
+venv/
+zookeeper/
+ingestion-service/*

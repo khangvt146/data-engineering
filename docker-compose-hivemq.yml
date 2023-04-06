@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  hivemq:
+    image: hivemq/hivemq4:latest
+    container_name: hivemq
+    mem_limit: 1g
+    ports:
+      - 1883:1883
+      - 8080:8080
+    environment:
+      HIVEMQ_CONTROL_CENTER_USER: admin
+      HIVEMQ_CONTROL_CENTER_PASSWORD: admin
+    healthcheck:
+      test: ["CMD", "echo", "\"\"", ">", "/dev/tcp/127.0.0.1/1883"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - smart_farm_network
+
+networks:
+  smart_farm_network:
+    external: true

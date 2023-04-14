@@ -24,7 +24,7 @@ client.loop_start()
 def generate_temp(num):
     while True:
         try:
-            temperature = random.randint(0,32)
+            temperature = random.randint(18,40)
             
             msg = {
                 "deviceId": "temp_sensors_" + str(num),

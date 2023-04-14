@@ -1,14 +1,12 @@
 # Initialize network
 docker network create smart_farm_network
 
-# Running Kafka
-docker-compose -f docker-compose-kafka.yml up -d 
+# Running all service
+docker-compose up -d --build
 
 # Using Kafka UI at localhost:19000
-# Create kafka topic (smart_farm_temperature, smart_farm_pressure, smart_farm_humidity, smart_farm_light, smart_farm_salinity) with 2 partions and 1 replica using Kafdrop UI
 
-# Running MQTT Broker HiveMQ
-docker-compose -f docker-compose-hivemq.yml up -d 
+# Create kafka topic (smart_farm_temperature, smart_farm_pressure, smart_farm_humidity, smart_farm_light, smart_farm_salinity) with 2 partions and 1 replica using Kafdrop UI
 
 # Open connector to Kafka
 docker cp ./kafka-configuration.xml hivemq:/opt/hivemq-4.13.0/extensions/hivemq-kafka-extension

@@ -14,9 +14,9 @@ subprocess.Popen(['python', PATH + "producer_humidity.py", '--thread', str(NUM_T
 
 subprocess.Popen(['python', PATH + "producer_light.py", '--thread', str(NUM_THREAD)], bufsize=0)
 
-subprocess.Popen(['python', PATH + "producer_pressure.py", '--thread', str(NUM_THREAD)], bufsize=0)
+# subprocess.Popen(['python', PATH + "producer_pressure.py", '--thread', str(NUM_THREAD)], bufsize=0)
 
-subprocess.Popen(['python', PATH + "producer_salinity.py", '--thread', str(NUM_THREAD)], bufsize=0)
+# subprocess.Popen(['python', PATH + "producer_salinity.py", '--thread', str(NUM_THREAD)], bufsize=0)
 
 
 

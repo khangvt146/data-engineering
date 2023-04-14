@@ -10,6 +10,6 @@ client = paho.Client()
 client.on_subscribe = on_subscribe
 client.on_message = on_message
 client.connect('localhost', 1883)
-client.subscribe('smartfarm/temperature', qos=1)
+client.subscribe('alarm', qos=1)
 
 client.loop_forever()

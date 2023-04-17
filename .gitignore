@@ -1,4 +1,4 @@
 kafka/
 venv/
 zookeeper/
-ingestion-service/*
+postgre_data/
